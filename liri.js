@@ -1,9 +1,9 @@
 
-// Link Keys.js 
-// var mykeys = require("./keys");
+// REQUIRES KEY CODES FROM TWITTER/SPOTIFY/OMDB TO FUNCTION
+// CURRENTLY BROKEN CODE
 
 
-
+// Search Paramaters For User
 var searchParam = process.argv[2];
 
 switch (searchParam){
@@ -26,6 +26,7 @@ switch (searchParam){
 
 
 
+
 // TWITTER SEARCH TERMS
 
 function myTwitter (){
@@ -33,10 +34,10 @@ function myTwitter (){
   var Twitter = require('twitter');
 
   var client = new Twitter({
-    consumer_key: "nIExOzZ4Gy2JwiT4BS0ZhFBdi",
-    consumer_secret: "mgwFBZe9WqeLZvQUrUvOz2lVvc19AslQqdLOHZG1C8RRm16RfR",
-    access_token_key: "924630193825832961-84SFE3OZ58IVXy64CFtwZOE01NB1EwF",
-    access_token_secret: "44BjocQzC3V17ZC7TAU1jstmdMzckLBBdHMvafMIBVH2l",
+    consumer_key: "<key here>",
+    consumer_secret: "<key here>",
+    access_token_key: "<key here>",
+    access_token_secret: "<key here>",
   });
 
   var params = {screen_name: '@mountain_up', count: 8};
@@ -62,8 +63,8 @@ function mySpotify (){
   var Spotify = require('node-spotify-api');
    
     var spotify = new Spotify({
-      id: "f062f48eef3649c8894892d5c8a42635",
-      secret: "ece6a269205a4c329df0f563fba1dc3a"
+      id: "<key here>",
+      secret: "<key here>"
     });
 
     spotify.search({ type: 'track', query: songName }, function(err, song) {
@@ -97,7 +98,7 @@ function myMovie (){
   var request = require('request');
   var movieName = process.argv[3];
 
-  var omdbUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
+  var omdbUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + "<key here>";
   request(omdbUrl, function (err,  movie, response) {
     if (err) {
       return console.error(err);
