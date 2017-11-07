@@ -2,7 +2,7 @@
 // REQUIRES KEY CODES FROM TWITTER/SPOTIFY/OMDB TO FUNCTION
 // CURRENTLY BROKEN CODE
 
-
+// ======================================================================
 // Search Paramaters For User
 var searchParam = process.argv[2];
 
@@ -24,9 +24,7 @@ switch (searchParam){
     break;
 }
 
-
-
-
+// ======================================================================
 // TWITTER SEARCH TERMS
 
 function myTwitter (){
@@ -54,7 +52,7 @@ function myTwitter (){
 };
 
 
-
+// ======================================================================
 // SPOTIFY SONG LOOKUP 
 
 function mySpotify (){
@@ -87,11 +85,8 @@ function mySpotify (){
 };
 
 
-
-
-
+// ======================================================================
 // OMDB MOVIE SEARH TERMS
-
 function myMovie (){
 
 
@@ -118,6 +113,5 @@ function myMovie (){
   });
 
 };
-
 
 
